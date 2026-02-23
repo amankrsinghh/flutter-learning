@@ -34,14 +34,14 @@ class _Form_ValidationState extends State<Form_Validation> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  prefixIcon: Icon(Icons.person)
+                  prefixIcon: Icon(Icons.person),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return "Please Enter Your Name";
                   }
                   return null;
-                }
+                },
               ),
 
               SizedBox(height: 15),
@@ -55,15 +55,14 @@ class _Form_ValidationState extends State<Form_Validation> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  prefixIcon: Icon(Icons.phone)
-
+                  prefixIcon: Icon(Icons.phone),
                 ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please Enter Your Number";
-                    }
-                    return null;
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please Enter Your Number";
                   }
+                  return null;
+                },
               ),
 
               SizedBox(height: 15),
@@ -77,17 +76,16 @@ class _Form_ValidationState extends State<Form_Validation> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  prefixIcon: Icon(Icons.email)
+                  prefixIcon: Icon(Icons.email),
                 ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please Enter Your Email";
-                    }
-                    else if (!value.contains("@")){
-                      return "Please Enter Valid Email";
-                    }
-                    return null;
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please Enter Your Email";
+                  } else if (!value.contains("@")) {
+                    return "Please Enter Valid Email";
                   }
+                  return null;
+                },
               ),
 
               SizedBox(height: 15),
@@ -101,34 +99,35 @@ class _Form_ValidationState extends State<Form_Validation> {
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  prefixIcon: Icon(Icons.lock)
+                  prefixIcon: Icon(Icons.lock),
                 ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please Enter Your Password";
-                    }
-                    return null;
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please Enter Your Password";
                   }
+                  return null;
+                },
               ),
 
               SizedBox(height: 15),
 
-
-
-              ElevatedButton(onPressed: (){
-                       if(_formKey.currentState!.validate()){
-                         print("Name: ${nameController.text}");
-                         print("Phone: ${phoneController.text}");
-                         print("Email: ${emailController.text}");
-                         print("Password: ${passwordController.text}");
-                       }
-
-              }, child: Text("Submit",style: TextStyle(color: Colors.white),),style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-                padding: EdgeInsets.all(15),
-              ),
+              ElevatedButton(
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    print("Name: ${nameController.text}");
+                    print("Phone: ${phoneController.text}");
+                    print("Email: ${emailController.text}");
+                    print("Password: ${passwordController.text}");
+                  }
+                },
+                child: Text("Submit", style: TextStyle(color: Colors.white)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.all(15),
+                ),
               ),
             ],
           ),

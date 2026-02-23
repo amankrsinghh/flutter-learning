@@ -27,17 +27,17 @@ class Listview extends StatelessWidget {
               height: 400,
               child: ListView(
                 children: [
-                  for(int i=0;i<=20;i++)
-                  ListTile(
-                    title: Text("This is Title"),
-                    subtitle: Text("this is subtitle"),
-                    leading: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                        "https://dpemoji.com/wp-content/uploads/2024/03/memes-dp27.jpg",
+                  for (int i = 0; i <= 20; i++)
+                    ListTile(
+                      title: Text("This is Title"),
+                      subtitle: Text("this is subtitle"),
+                      leading: CircleAvatar(
+                        backgroundImage: NetworkImage(
+                          "https://dpemoji.com/wp-content/uploads/2024/03/memes-dp27.jpg",
+                        ),
                       ),
+                      trailing: Icon(Icons.details),
                     ),
-                    trailing: Icon(Icons.details),
-                  ),
                 ],
               ),
             ),

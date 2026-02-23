@@ -15,16 +15,20 @@ class Expandedandflexible_example extends StatelessWidget {
 
           Flexible(child: Container(color: Colors.blue)),
 
-
           ///////row///////
-
           Expanded(
             child: Row(
               children: [
-                Expanded(child: Container(color: Colors.green, height: 100),),
+                Expanded(child: Container(color: Colors.green, height: 100)),
                 Spacer(),
-                Expanded(child: Container(color: Colors.yellow, height: 100),),
-                Flexible(child: Container(color: Colors.orange, height: 100,width: 50,),),
+                Expanded(child: Container(color: Colors.yellow, height: 100)),
+                Flexible(
+                  child: Container(
+                    color: Colors.orange,
+                    height: 100,
+                    width: 50,
+                  ),
+                ),
               ],
             ),
           ),

@@ -6,20 +6,14 @@ class Stack_example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stack"),
-      ),
+      appBar: AppBar(title: Text("Stack")),
       body: Center(
         child: Column(
           mainAxisAlignment: .center,
           children: [
             Stack(
               children: [
-                Container(
-                  color: Colors.red,
-                  width: 400,
-                  height: 400,
-                ),
+                Container(color: Colors.red, width: 400, height: 400),
                 Positioned(
                   top: 0,
                   right: 0,
@@ -27,7 +21,6 @@ class Stack_example extends StatelessWidget {
                     color: Colors.green,
                     width: 100,
                     height: 100,
-
                   ),
                 ),
                 Positioned(
@@ -37,18 +30,12 @@ class Stack_example extends StatelessWidget {
                     color: Colors.yellow,
                     width: 100,
                     height: 100,
-
                   ),
                 ),
                 Positioned(
                   bottom: 0,
                   right: 0,
-                  child: Container(
-                    color: Colors.blue,
-                    width: 100,
-                    height: 100,
-
-                  ),
+                  child: Container(color: Colors.blue, width: 100, height: 100),
                 ),
                 Positioned(
                   bottom: 0,
@@ -57,7 +44,6 @@ class Stack_example extends StatelessWidget {
                     color: Colors.blueGrey,
                     width: 100,
                     height: 100,
-
                   ),
                 ),
                 Positioned(
@@ -69,11 +55,10 @@ class Stack_example extends StatelessWidget {
                     color: Colors.white,
                     width: 100,
                     height: 100,
-
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
